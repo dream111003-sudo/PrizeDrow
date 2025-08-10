@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(45deg, #ffccff, #ccffff, #ffffcc);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header {
+  padding: 10px;
+}
+
+#statusArea {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+#drawBtn {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border: none;
+  background: #ff66cc;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#drawBtn:hover {
+  transform: scale(1.1);
+}
+
+#result {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+#prizeImage img {
+  margin-top: 15px;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.result-animate {
+  animation: pop 1s ease forwards, colorChange 2s infinite alternate;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes colorChange {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: green; }
+}
+
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
